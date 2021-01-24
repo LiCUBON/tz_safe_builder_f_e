@@ -1,72 +1,74 @@
-const menuBento = document.querySelector(".menu__item--bento");
-const buttonMenu = document.querySelector(".button__menu");
+const sideNav = document.getElementById("sideNav");
+const sliderBtn = document.querySelector(".slider-button")
+const pageBtn = document.querySelectorAll(".slider__page-btn")
+const sliderPage = document.querySelector(".slider__page")
 
-menuBento.addEventListener("focus", () => {
-   buttonMenu.classList.add("activeMenu");
-   document.getElementById("mySidenav").style.width = "100%"
-});
+sideNav.addEventListener('focus', () =>{
+   document.getElementById("mySidenav").style.width = "100%";
+})
+sideNav.addEventListener('blur', () =>{
+   document.getElementById("mySidenav").style.width = "0";
+})
+ 
+sliderBtn.addEventListener('click', (event) => {
+   let button = event.target.closest('button');
+      if (!button) return; 
+      if (!sliderBtn.contains(button)) return; 
+      nextSlid(button);
+})
 
-menuBento.addEventListener("blur", () => {
-   buttonMenu.classList.remove("activeMenu");
-   document.getElementById("mySidenav").style.width = "0"
-   
-});
-
-let slider = document.getElementById('slider');
-let selectedTagA;
-let rubric = document.querySelector(".slider__frame > p")
-
-
-let sliderSubTitle = document.querySelector(".slider_subtitle")
-
-
-slider.onclick = function(event) {
-   let target = event.target;
-   let deleteActiv = document.querySelector(".slider__btn");
-   
-   while (target != this) {
-      
-      if (target.tagName == "A") {
-         deleteActiv.classList.remove('active');
-         active(target);
-         return;
+sliderPage.addEventListener("click", (event) => {
+   let button = event.target.closest('button');
+   for (let i = 0; i < pageBtn.length; i++) {
+      if(pageBtn[i].classList.contains("active")){
+         pageBtn[i].classList.remove("active");
       }
-
-      target = target.parentNode;
+      button.classList.add("active")
    }
-}
 
-function active(node) {
+      
+})
+
+function nextSlid(node) {
+
+   switch (node.getAttribute("data-action")) {
+      case "right":
+         pageBtn.forEach((element, index) => {
+            if (element.classList.contains("active")) {
+               element.classList.remove("active")
+            }else {
+            }
+         });
+         break;
+      case "left":
+         
+         break;
    
-   switch (node.textContent) {
-      case "01":
-         sliderSubTitle.textContent = "Акційна пропозиція №1"
-         rubric.textContent = "Забудовник - це 5 років успішної роботи на українському ринку. Успішної роботи на українському ринку."
-         break;
-      
-      case "02":
-         sliderSubTitle.textContent = "Акційна пропозиція №2"
-         rubric.textContent = "Понад 700 квартир вже продано, а в планах компанії побудувати 120 тис. метрів житлової площі."
-         break;
-      
-      case "03":
-         sliderSubTitle.textContent = "Акційна пропозиція №3"
-         rubric.textContent = "це 7 роківв успішної роботи в українському ринку"
-         break;
-      
-      case "04":
-         sliderSubTitle.textContent = "Акційна пропозиція №4"
-         rubric.textContent = "Test4"
-         break;
-      
       default:
          break;
    }
 
 
-   if (selectedTagA) {
-      selectedTagA.classList.remove('active');
-   }
-      selectedTagA = node;
-      selectedTagA.classList.add('active');
- }
+   // switch (node.getAttribute("data-action")) {          
+   //    case "left":
+   //       for (let i = 0; i < pageBtn.length; i++) {
+   //          if(pageBtn[3].classList[1] == "active") {
+   //             pageBtn[3].classList.remove("active");
+   //             pageBtn[0].classList.add('active');
+   //          }else if(pageBtn[i].classList[1] == "active") {
+   //             pageBtn[i].classList.remove("active");
+   //             pageBtn[i+1].classList.add('active');
+   //             break;
+   //          }
+   //       }
+   //       break;
+   //    case "right":
+   //       console.log(pageBtn[test++]);
+   //       break;
+   
+   // }
+   
+
+}
+
+

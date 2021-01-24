@@ -4,74 +4,86 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="assets/css/style.css">
-   <title>TZ - Frond-Endt: Safe Builder</title>
+   <script src="https://kit.fontawesome.com/a146c3746d.js" crossorigin="anonymous"></script>
+   <title>TZ - builder</title>
 </head>
 <body>
    <header class="header">
+      <div class="container container--nav">
          <div class="header__inner">
-            
-            <div class="header__logo">LOGO</div>
-            <nav class="nav__lang">
-               <a href="#" class="link__lang active">ua</a>
-               <a href="#" class="link__lang">ru</a>
-               <a href="#" class="link__lang">en</a>
-            </nav>
-            <div class="button__menu">
-               <div class="menu__item--bento" tabindex="0">
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-                     <div class="box"></div>
-               </div>
-            </div>
-            <nav id="mySidenav" class="main__menu">
-               <a href="#" class="main__menu--list">Головна</a>
-               <a href="#" class="main__menu--list">Про компанію</a>
-               <a href="#" class="main__menu--list">Варіанти придбання</a>
-               <a href="#" class="main__menu--list">Варіанти інвестування</a>
-               <a href="#" class="main__menu--list">Новини</a>
-               <a href="#" class="main__menu--list">Документи</a>
-               <a href="#" class="main__menu--list">Контакти</a>
-               <a href="#" class="main__menu--list">Співробітницвто</a>
-            </nav>
-         </div>
-   </header>
-   <div class="intro">
-      <div class="conteiner">
-         <div class="intro__inner">
-            <a href="#" class="btn">про компанію<img src="assets/image/arrow-left.png" alt=""></a>
-            <div class="info__frame">
-               <div class="inner__frame">
-                  <h1 class="intro__title">Надійний забудовник</h1>
-                  <p>– це 7 роківв успішної роботи в українському ринку. Понад 700 квартир вже продано, а в планах компанії побудувати 120 тис. метрів житлової площі.</p>
-               </div class="inner__frame">
-            </div>
-            <div class="wrapper__slider">
-               <div class="slider__frame">
-                  <div id="slider">
-                     <a href="#" class="slider__btn active">01</a>
-                     <a href="#" class="slider__btn">02</a>
-                     <a href="#" class="slider__btn">03</a>
-                     <a href="#" class="slider__btn">04</a>
+            <div class="header__logo">logo</div>
+            <div class="wrapper-nav">
+               <ul class="nav__lang">
+                  <li><a class="nav__link active" href="#">ua</a></li>
+                  <li><a class="nav__link" href="#">ru</a></li>
+                  <li><a class="nav__link" href="#">en</a></li>
+               </ul>
+               <div class="button__menu">
+                  <div class="menu__item--bento activeMenu" id="sideNav" tabindex="0">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                   </div>
-                  <h2 class="slider_subtitle">Акційна пропозиція №1</h2>
-                  <p>
-                     Забудовник - це 5 років успішної роботи на українському ринку. Успішної роботи на українському ринку.
-                  </p>
                </div>
-               <div class="slider__img"></div>
+               <div id="mySidenav" class="sidenav">
+                  <a href="#">Головна</a>
+                  <a href="#">Про компанію</a>
+                  <a href="#">Варіанти придбання</a>
+                  <a href="#">Варіанти інвестування</a>
+                  <a href="#">Новини</a>
+                  <a href="#">Документи</a>
+                  <a href="#">Контакти</a>
+                  <a href="#">Співробітницвто</a>
+               </div>
             </div>
          </div>
       </div>
-      
+   </header>
+   <div class="intro">
+      <div class="container">
+         <div class="intro__inner">
+            <a class="btn btn--visual" href="#">
+               <span class="btn__label">Про компанію</span>
+               <span class="vertical-line"></span>
+               <img src="assets/image/arrow-right.png" alt="">
+            </a>
+            <div class="intro__block">
+               <h1 class="intro__title">Надійний забудовник</h1>
+               <p>– це 7 роківв успішної роботи в українському ринку. Понад 700 квартир вже продано, а в планах компанії побудувати 120 тис. метрів житлової площі.</p>
+               <div class="slider-button">
+                  <button class="btn btn--slider" data-action="left">
+                     <img src="assets/image/arrow-left.png" alt="">
+                  </button>
+                  <button class="btn btn--slider" data-action="right">
+                     <img src="assets/image/arrow-right.png" alt="">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="slider">
+            <div class="slider__frame">
+               <div class="slider__content">
+                  <div class="slider__page">
+                     <button class="slider__page-btn active">01</button>
+                     <button class="slider__page-btn">02</button>
+                     <button class="slider__page-btn">03</button>
+                     <button class="slider__page-btn">04</button>
+                  </div>
+                  <h2 class="slider__title">Акційна пропозиція №1</h2>
+                  <p>Забудовник – это 5 лет успешной работы на украинском рынке. Успешной работы на украинском рынке.</p>
+               </div>
+               <div class="slider__bg"></div>
+            </div>
+         
+      </div>
    </div>
    <script src="assets/js/script.js"></script>
-
-   
 </body>
 </html>

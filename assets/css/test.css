@@ -1,0 +1,26 @@
+.d11 {
+   height: 100; 
+   width: 100px;
+   border-top: 100px solid #FFE344;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+   }
+
+<div class="slider_button">
+   <button class="btn btn--slider">
+      <img src="assets/image/arrow-left.png" alt="">
+   </button>
+   <button class="btn btn--slider">
+      <img src="assets/image/arrow-right.png" alt="">
+   </button>
+</div>
+
+.slider_button {
+   display: flex;
+   margin-top: 9rem;
+   margin-left: 1.1rem;
+
+   z-index: 100;
+   
+  
+}
