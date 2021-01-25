@@ -26,6 +26,7 @@ body {
 
 .container--nav {
    max-width: 1824px;
+   height: 9.6rem;
 }
 
 /* Header */
@@ -40,7 +41,7 @@ body {
 }
 
 .header__inner {
-   height: 9.6rem;
+   height: inherit;
    display: flex;
    align-items: center;
 }
@@ -369,7 +370,7 @@ body {
 .slider__frame {
    display: flex;
    width: 100%;
-   max-width: 948px;
+   max-width: 94.8rem;
 
    background-color: #4E254F;
 
@@ -381,7 +382,7 @@ body {
    max-width: 420px;
    
    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
-   background: url(/assets/image/Rectangle.jpg) center no-repeat;
+   background: url(../image/Rectangle.jpg) center no-repeat;
    
 }
 
@@ -428,6 +429,190 @@ body {
 }
 
 
+/* Media */
 
 
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px) {
+   
+/* intro */
+   
+   .intro__block {
+      max-width: 62.4rem;
+      height: 39rem;
+   }
+   .intro__title {
+      font-size: 5rem;
+   }
+
+/* slider */
+   .slider__frame {
+      max-width: 62.2rem;
+   }
+   .slider__bg {
+      display: none;
+   }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px) {
+/* intro */
+
+   .intro__block {
+      padding: 5.6rem 2.4rem;
+      max-width: 49.6rem;
+      height: 34.2rem;
+   }
+   
+   .intro__title {
+      margin-bottom: 2rem;
+      font-size: 4.2rem;
+   }
+
+   .intro__block > p {
+      margin: 0;
+      font-size: 1.4rem;
+   }
+
+   /* slider */
+
+   .slider__frame {
+      max-width: 49.6rem;
+      height: 19.6rem;
+   }
+   .slider__content {
+      padding: 2.4rem 3.2rem;
+   }
+   
+   .slider__title {
+      margin: 1rem 0;
+      font-size: 1.8rem;
+   }
+
+   .slider__subtitle {
+      
+      font-size: 1.4rem;
+   }
+
+   .slider-button {
+      display: none;
+   }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+/* intro */
+
+   .intro__block {
+      max-width: 38.1rem;
+   }
+
+/* slider */
+
+   .slider__frame {
+      max-width: 35.4rem;
+   }
+  
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+   .container {
+      padding: 0 2.4rem;
+   }
+
+   .btn--visual {
+      align-self: stretch;
+      text-align: center;
+      margin: 1.5rem 0 8.7rem;
+   }
+   
+   .intro__block {
+      height: 24.6rem;
+      padding:  3.2rem 1.6rem;
+      order: -1;
+   }
+
+   .intro__title {
+      font-size: 3rem;
+   }
+   .slider {
+      
+      padding: 0 2.4rem;
+      order: -1;
+      
+   }
+   .slider__frame {
+      max-width: none;
+   }
+
+   .slider__content {
+      padding:  3.2rem 1.6rem;
+   }
+
+
+
+   .sidenav {padding-top: 15px;}
+   .sidenav a {
+      font-size: 2.4rem;
+      margin-left: 1rem;;
+   }
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+   .container--nav {
+      height: 6rem;
+   }
+
+   .sidenav {
+      top: 6rem;
+   }
+   /* Header */
+   .wrapper-nav {
+      justify-content: flex-end;
+   }
+
+   .nav__lang {
+      display: none;
+   }
+
+   .btn--visual {
+      align-self: stretch;
+      text-align: center;
+      padding: 1.5rem 7.5rem 1.5rem  2.3rem;
+      margin: 1.5rem 0 2.5rem;
+      overflow: hidden;
+   }
+
+   .intro__block {
+      height: 20.6rem;
+   }
+
+   .intro__title {
+      font-size: 2rem;
+   }
+
+   .intro__block > p {
+      font-size: 1.1rem;
+   }
+
+   .slider__frame {
+      height: 15.6rem;
+   }
+   
+   .slider__page-btn {
+      font-size: 1.4;
+   }
+   .slider__title {
+      margin: 0.5rem 0;
+      font-size: 1.4rem;
+   }
+
+   .slider__subtitle {
+      font-size: 1.1rem;
+   }
+
+
+}
 
